@@ -11,17 +11,19 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             //InsertEmployee();'
-            Pdf();
+            //Pdf();//Skapa och öppna pdf fil
+            AsynchronousClient.Start();
+            Console.ReadKey();
         }
         private static void Pdf()
         {
             string filePath = @"c:\tfl\test.pdf";
             DateTime dt = DateTime.Now;
-            pdfDocument myDoc = new pdfDocument("Okab Swweden AB internal Reel labels", "Leif Ödell");
+            pdfDocument myDoc = new pdfDocument("PDF dokument - Test", "Leif Ödell");
             pdfPage myPage = myDoc.addPage(500, 500);
-            myPage.addText("Okab reel label!", 100, 250, predefinedFont.csHelveticaBold, 24);
+            myPage.addText("My label!", 100, 250, predefinedFont.csHelveticaBold, 24);
             myPage.addText(dt.ToLongDateString(), 100, 150, predefinedFont.csHelveticaBold, 22);
-            myPage.addText(dt.ToLongTimeString(), 100, 200, predefinedFont.csHelveticaBold, 20);
+            myPage.addText(dt.ToLongTimeString(), 100, 50, predefinedFont.csHelveticaBold, 20);
             myDoc.createPDF(filePath);
             myPage = null;
             myDoc = null;
