@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FinalCountdown.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EventName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please enter event name</Value>
+    </Setting>
+    <Setting Name="EventDateTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">05/09/2014 09:00:00</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

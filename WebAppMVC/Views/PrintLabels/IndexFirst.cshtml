@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebAppMVC.Printing>
+@{
+    ViewBag.Title = "Etiketter";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h2>State Area - Report</h2>
+
+<table class=" table table-striped table-hover">
+    <tr>
+        <th>Text 1</th>
+        <th>Text 2</th>
+        <th>Text 3</th>
+        <th>Text 4</th>
+        <th>Text 5</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Text1)</td>
+            <td>@Html.DisplayFor(modelItem => item.Text2)</td>
+            <td>@Html.DisplayFor(modelItem => item.Text3)</td>
+            <td>@Html.DisplayFor(modelItem => item.Text4)</td>
+            <td>@Html.DisplayFor(modelItem => item.Text5)</td>
+        </tr>
+    }
+</table>
+<div style="padding:10px; border:1px solid black">
+    <div><a href="@Url.Action("Report",new {id= "Printer"})"> To printer</a></div>
+    <br />
+    <div><a href="@Url.Action("Report",new {id= "PDF"})"> Get Report PDF</a></div>
+    <div><a href="@Url.Action("Report",new {id= "Excel"})"> Get Report Excel</a></div>
+    <div><a href="@Url.Action("Report",new {id= "Word"})"> Get Report Word</a></div>
+    <div><a href="@Url.Action("Report",new {id= "Image"})"> Get Report Image</a></div>
+</div>

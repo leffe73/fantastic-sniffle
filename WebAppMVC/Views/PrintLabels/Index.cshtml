@@ -1,0 +1,59 @@
+﻿@model WebAppMVC.Printing
+
+@{
+    ViewBag.Title = "Rull etiketter";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Skriv ut interna rulletiketter</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Text1)
+            @Html.ValidationMessageFor(model => model.Text1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Text2)
+            @Html.ValidationMessageFor(model => model.Text2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Text3)
+            @Html.ValidationMessageFor(model => model.Text3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Text4)
+            @Html.ValidationMessageFor(model => model.Text4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Text5)
+            @Html.ValidationMessageFor(model => model.Text5)
+        </div>
+        <p>
+            <input type="Submit" value="Print it" />
+        </p>
+    </fieldset>
+}
+
